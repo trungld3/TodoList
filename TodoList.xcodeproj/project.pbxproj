@@ -12,7 +12,6 @@
 		51935EE1245000DA0036A445 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51935EE0245000DA0036A445 /* ToDoListViewController.swift */; };
 		51935EE4245000DA0036A445 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51935EE2245000DA0036A445 /* Main.storyboard */; };
 		51935EE6245000DA0036A445 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51935EE5245000DA0036A445 /* Assets.xcassets */; };
-		51935EE9245000DA0036A445 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51935EE7245000DA0036A445 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +21,6 @@
 		51935EE0245000DA0036A445 /* ToDoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListViewController.swift; sourceTree = "<group>"; };
 		51935EE3245000DA0036A445 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51935EE5245000DA0036A445 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		51935EE8245000DA0036A445 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		51935EEA245000DA0036A445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,7 +59,6 @@
 				51935EE0245000DA0036A445 /* ToDoListViewController.swift */,
 				51935EE2245000DA0036A445 /* Main.storyboard */,
 				51935EE5245000DA0036A445 /* Assets.xcassets */,
-				51935EE7245000DA0036A445 /* LaunchScreen.storyboard */,
 				51935EEA245000DA0036A445 /* Info.plist */,
 			);
 			path = TodoList;
@@ -125,7 +122,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51935EE9245000DA0036A445 /* LaunchScreen.storyboard in Resources */,
 				51935EE6245000DA0036A445 /* Assets.xcassets in Resources */,
 				51935EE4245000DA0036A445 /* Main.storyboard in Resources */,
 			);
@@ -153,14 +149,6 @@
 				51935EE3245000DA0036A445 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		51935EE7245000DA0036A445 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				51935EE8245000DA0036A445 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

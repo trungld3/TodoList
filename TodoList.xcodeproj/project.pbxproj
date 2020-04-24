@@ -12,6 +12,8 @@
 		51935EE1245000DA0036A445 /* ToDoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51935EE0245000DA0036A445 /* ToDoListViewController.swift */; };
 		51935EE4245000DA0036A445 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51935EE2245000DA0036A445 /* Main.storyboard */; };
 		51935EE6245000DA0036A445 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51935EE5245000DA0036A445 /* Assets.xcassets */; };
+		51C32BE924521B3B00A80195 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C32BE824521B3B00A80195 /* Item.swift */; };
+		51C32BF024521C5B00A80195 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 51C32BEF24521C5B00A80195 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		51935EE3245000DA0036A445 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		51935EE5245000DA0036A445 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		51935EEA245000DA0036A445 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		51C32BE824521B3B00A80195 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		51C32BEF24521C5B00A80195 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +42,7 @@
 		51935ED0245000DA0036A445 = {
 			isa = PBXGroup;
 			children = (
+				51C32BEF24521C5B00A80195 /* Default-568h@2x.png */,
 				51935EDB245000DA0036A445 /* TodoList */,
 				51935EDA245000DA0036A445 /* Products */,
 			);
@@ -56,12 +61,45 @@
 			children = (
 				51935EDC245000DA0036A445 /* AppDelegate.swift */,
 				51935EDE245000DA0036A445 /* SceneDelegate.swift */,
-				51935EE0245000DA0036A445 /* ToDoListViewController.swift */,
-				51935EE2245000DA0036A445 /* Main.storyboard */,
-				51935EE5245000DA0036A445 /* Assets.xcassets */,
+				51C32BEC24521B6200A80195 /* Controller */,
+				51C32BEA24521B4700A80195 /* Data Model */,
+				51C32BED24521B6A00A80195 /* View */,
+				51C32BEE24521B7000A80195 /* Support File */,
 				51935EEA245000DA0036A445 /* Info.plist */,
 			);
 			path = TodoList;
+			sourceTree = "<group>";
+		};
+		51C32BEA24521B4700A80195 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				51C32BE824521B3B00A80195 /* Item.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		51C32BEC24521B6200A80195 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				51935EE0245000DA0036A445 /* ToDoListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		51C32BED24521B6A00A80195 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				51935EE2245000DA0036A445 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		51C32BEE24521B7000A80195 /* Support File */ = {
+			isa = PBXGroup;
+			children = (
+				51935EE5245000DA0036A445 /* Assets.xcassets */,
+			);
+			path = "Support File";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +162,7 @@
 			files = (
 				51935EE6245000DA0036A445 /* Assets.xcassets in Resources */,
 				51935EE4245000DA0036A445 /* Main.storyboard in Resources */,
+				51C32BF024521C5B00A80195 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51C32BE924521B3B00A80195 /* Item.swift in Sources */,
 				51935EE1245000DA0036A445 /* ToDoListViewController.swift in Sources */,
 				51935EDD245000DA0036A445 /* AppDelegate.swift in Sources */,
 				51935EDF245000DA0036A445 /* SceneDelegate.swift in Sources */,

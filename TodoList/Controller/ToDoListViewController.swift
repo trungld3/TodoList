@@ -10,11 +10,15 @@ import UIKit
 
 class ToDoListViewController: UITableViewController {
     
-    var itemArray =  [Item]()
-    let defaults = UserDefaults.standard
     
+    
+    var itemArray =  [Item]()
+    let dataFilePatch = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(dataFilePatch)
+       
         let newItem = Item()
        
         newItem.title = "Find Mike"
@@ -31,14 +35,14 @@ class ToDoListViewController: UITableViewController {
         let newItem3 = Item()
                newItem3.title = "Find Mike3"
                itemArray.append(newItem3)
-          itemArray.append(newItem3)
+        
        
         
         
         // Do any additional setup after loading the view.
-        if let items = defaults.array(forKey: "ToDoListArray") as? [Item] {
-            itemArray = items
-        }
+//        if let items = defaults.array(forKey: "ToDoListArray") as? [Item] {
+//            itemArray = items
+//        }
         
     }
     // MARK - TableView DataSource Methods
@@ -71,7 +75,8 @@ class ToDoListViewController: UITableViewController {
 //        } else {
 //             tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
 //        }
-        tableView.reloadData()
+        
+      self.saveItem()
         tableView.deselectRow(at: indexPath, animated: true)
         
     }
@@ -85,9 +90,9 @@ class ToDoListViewController: UITableViewController {
             let newItem = Item()
             newItem.title = textField.text!
             self.itemArray.append(newItem)
-            self.defaults.set(self.itemArray, forKey: "ToDoListArray")
+          //  self.defaults.set(self.itemArray, forKey: "ToDoListArray")
             
-            self.tableView.reloadData()
+            
         }
         
         alert.addTextField { (alertTextField) in
@@ -100,6 +105,22 @@ class ToDoListViewController: UITableViewController {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
         
+    }
+    
+    // MARK - Model Manpulations Methods
+    func saveItem (){
+        let encoder1 = PropertyListEncoder()
+          do {
+              let data  = try encoder1.encode(itemArray)
+              try data.write(to: dataFilePatch!)
+          }
+          catch {
+          print("error: \(error)")
+          }
+        
+          
+        
+          self.tableView.reloadData()
     }
 }
 
